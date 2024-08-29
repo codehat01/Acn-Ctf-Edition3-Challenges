@@ -1,0 +1,1 @@
+Bob has intercepted a secret message that has been encrypted using an algorithm. Your goal is to help bob decode this message and uncover its contents.
