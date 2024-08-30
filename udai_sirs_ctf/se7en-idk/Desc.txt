@@ -1,0 +1,1 @@
+You the investivagtive journalist of Ney York Times, has got an important info on the puzzle of a murder. Solve the mystery by finding what the murderer has to **display**. Enclose the flag in the flag format ACNCTF{}

@@ -1,0 +1,1 @@
+Bob sent Karun a corrupted image which contains some precious information inside it. Recover the image file and send the secret message hidden as an image inside the file to Karun.
