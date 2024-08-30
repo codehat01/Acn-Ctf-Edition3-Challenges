@@ -1,0 +1,1 @@
+You have intercepted an encrypted message, but the only clue you have is that the message was encrypted in 1987 . Your task is to decrypt the message using the provided details
