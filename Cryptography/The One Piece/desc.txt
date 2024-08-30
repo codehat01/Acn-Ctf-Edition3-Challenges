@@ -1,0 +1,3 @@
+The straw hat crew has found the one piece, but onepiece seems to be hashed with help of rockyou pirates, help luffy and his crew crack the onepiece.
+
+The key of the hash is the flag ACN_CTF{key}
