@@ -1,0 +1,3 @@
+bigmom has managed to download the object file help her to find the pirate flag
+
+Note : write it in flag format ACN_CTF{your_flag_here} 
