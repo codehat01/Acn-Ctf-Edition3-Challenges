@@ -1,0 +1,5 @@
+sentence 1 : geese.voltage.hunter             -> Rockstar Games India
+
+sentence 2 : unveils.slacker.bounded   	      -> Sony Group Headquarters
+
+sentence 3 : explores.outfitter.roses         -> Amrita Vishwa Vidhyapeetham
