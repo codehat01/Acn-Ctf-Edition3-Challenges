@@ -1,0 +1,5 @@
+Sona was searching for retro photos and found one , she is willing to visit the place help her to find the location of the image.
+
+Flag format : if the location is Chennai and its taken in 2000 then 
+
+	      ACN_CTF{chennai_2000}
