@@ -1,0 +1,59 @@
+
+challenge:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08049000 <_start>:
+ 8049000:	b8 04 00 00 00       	mov    $0x4,%eax
+ 8049005:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 804900a:	b9 1d a0 04 08       	mov    $0x804a01d,%ecx
+ 804900f:	ba 0e 00 00 00       	mov    $0xe,%edx
+ 8049014:	cd 80                	int    $0x80
+ 8049016:	b8 03 00 00 00       	mov    $0x3,%eax
+ 804901b:	bb 00 00 00 00       	mov    $0x0,%ebx
+ 8049020:	b9 2c a0 04 08       	mov    $0x804a02c,%ecx
+ 8049025:	ba 64 00 00 00       	mov    $0x64,%edx
+ 804902a:	cd 80                	int    $0x80
+ 804902c:	c6 44 01 ff 00       	movb   $0x0,-0x1(%ecx,%eax,1)
+ 8049031:	b9 00 a0 04 08       	mov    $0x804a000,%ecx
+ 8049036:	ba 08 00 00 00       	mov    $0x8,%edx
+ 804903b:	e8 70 00 00 00       	call   80490b0 <decrypt>
+ 8049040:	b9 08 a0 04 08       	mov    $0x804a008,%ecx
+ 8049045:	ba 08 00 00 00       	mov    $0x8,%edx
+ 804904a:	e8 61 00 00 00       	call   80490b0 <decrypt>
+ 804904f:	b9 10 a0 04 08       	mov    $0x804a010,%ecx
+ 8049054:	ba 08 00 00 00       	mov    $0x8,%edx
+ 8049059:	e8 52 00 00 00       	call   80490b0 <decrypt>
+ 804905e:	b9 18 a0 04 08       	mov    $0x804a018,%ecx
+ 8049063:	ba 04 00 00 00       	mov    $0x4,%edx
+ 8049068:	e8 43 00 00 00       	call   80490b0 <decrypt>
+ 804906d:	b8 04 00 00 00       	mov    $0x4,%eax
+ 8049072:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 8049077:	b9 00 a0 04 08       	mov    $0x804a000,%ecx
+ 804907c:	ba 08 00 00 00       	mov    $0x8,%edx
+ 8049081:	cd 80                	int    $0x80
+ 8049083:	b9 08 a0 04 08       	mov    $0x804a008,%ecx
+ 8049088:	ba 08 00 00 00       	mov    $0x8,%edx
+ 804908d:	cd 80                	int    $0x80
+ 804908f:	b9 10 a0 04 08       	mov    $0x804a010,%ecx
+ 8049094:	ba 08 00 00 00       	mov    $0x8,%edx
+ 8049099:	cd 80                	int    $0x80
+ 804909b:	b9 18 a0 04 08       	mov    $0x804a018,%ecx
+ 80490a0:	ba 04 00 00 00       	mov    $0x4,%edx
+ 80490a5:	cd 80                	int    $0x80
+ 80490a7:	b8 01 00 00 00       	mov    $0x1,%eax
+ 80490ac:	31 db                	xor    %ebx,%ebx
+ 80490ae:	cd 80                	int    $0x80
+
+080490b0 <decrypt>:
+ 80490b0:	31 db                	xor    %ebx,%ebx
+
+080490b2 <decrypt_loop>:
+ 80490b2:	8a 04 19             	mov    (%ecx,%ebx,1),%al
+ 80490b5:	32 05 1c a0 04 08    	xor    0x804a01c,%al
+ 80490bb:	88 04 19             	mov    %al,(%ecx,%ebx,1)
+ 80490be:	43                   	inc    %ebx
+ 80490bf:	4a                   	dec    %edx
+ 80490c0:	75 f0                	jne    80490b2 <decrypt_loop>
+ 80490c2:	c3                   	ret

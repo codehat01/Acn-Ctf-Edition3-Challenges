@@ -280,8 +280,7 @@ def start_challenge3(stdscr):
 
     display_go_program1(stdscr)
 
-    stdscr.addstr(20, 0, "Go program executed successfully. Now, answer the following:")
-    
+    stdscr.clear()
     # Harder Question 1
     stdscr.addstr(22, 0, "1. What is the sum of the numbers in the Go program?")
     stdscr.addstr(23, 0, "   (Hint: Check the numbers in the 'numbers' slice)")
@@ -311,6 +310,7 @@ def start_challenge3(stdscr):
         return True
     else:
         stdscr.addstr(32, 0, "Incorrect answers. Try again.")
+        return False
 
     stdscr.refresh()
 
