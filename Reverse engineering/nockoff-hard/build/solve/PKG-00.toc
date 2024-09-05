@@ -40,7 +40,9 @@
    '/home/vexo/MyCTFChallenge/github/65677845678470/Reverse '
    'engineering/nockoff-hard/solve.py',
    'PYSOURCE'),
-  ('libpython3.11.so', '/lib/x86_64-linux-gnu/libpython3.11.so', 'BINARY'),
+  ('libpython3.11.so.1.0',
+   '/lib/x86_64-linux-gnu/libpython3.11.so.1.0',
+   'BINARY'),
   ('lib-dynload/_typing.cpython-311-x86_64-linux-gnu.so',
    '/usr/lib/python3.11/lib-dynload/_typing.cpython-311-x86_64-linux-gnu.so',
    'EXTENSION'),
@@ -98,7 +100,7 @@
    '/home/vexo/MyCTFChallenge/github/65677845678470/Reverse '
    'engineering/nockoff-hard/build/solve/base_library.zip',
    'DATA')],
- 'libpython3.11.so',
+ 'libpython3.11.so.1.0',
  False,
  False,
  False,

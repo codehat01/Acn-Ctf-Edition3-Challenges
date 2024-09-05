@@ -256,13 +256,13 @@ def start_challenge2(stdscr):
     curses.noecho()
 
     # Harder Question 3
-    stdscr.addstr(29, 0, "3. In the Go program, how are the items processed before writing to the file?")
+    stdscr.addstr(29, 0, "3. In Go, what is the keyword used to define a new type based on an existing type?")
     stdscr.addstr(30, 0, "Answer: ")
     curses.echo()
     answer3 = stdscr.getstr(30, 8).decode('utf-8').strip()
     curses.noecho()
 
-    if answer1 == "3" and answer2 == "float64" and answer3 == "They are collected in a slice and then written to a file in JSON format.":
+    if answer1 == "3" and answer2 == "float64" and answer3.lower() == "type":
         stdscr.addstr(32, 0, "Correct! You've successfully completed the challenge.")
         stdscr.addstr(33, 0, "Here is your key: 0xvexo2024")
         return True
@@ -303,7 +303,7 @@ def start_challenge3(stdscr):
     answer3 = stdscr.getstr(30, 8).decode('utf-8').strip()
     curses.noecho()
 
-    if answer1 == "150" and answer2 == "30.00" and answer3 == "14.72":
+    if answer1 == "150" and (answer2 == "30.00" or answer2=="30")and answer3 == "14.72":
         stdscr.addstr(32, 0, "Correct! You've successfully completed the challenge.")
         stdscr.addstr(33, 0, "You have found the flag= ACN_CTF{R3c0gn1z3_TH3 ")
         stdscr.addstr(34,0,"find the invisible final box to get the output")

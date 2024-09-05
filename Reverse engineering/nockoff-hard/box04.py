@@ -108,7 +108,7 @@ func main() {
 def start_challenge3(stdscr):
     stdscr.clear()
     stdscr.addstr("In this challenge, a Go program will be executed.\n")
-    stdscr.addstr("You must analyze the Go code and answer the following questions about the libraries used:\n\n")
+    stdscr.addstr("You must analyze the Go code and answer the following simple questions:\n\n")
     stdscr.addstr("Press any key to continue...")
     stdscr.refresh()
     stdscr.getch()
@@ -125,43 +125,44 @@ def start_challenge3(stdscr):
         return
 
     stdscr.addstr(20, 0, "Go program executed successfully. Now, answer the following:")
-    
-    # Advanced Question 1
-    stdscr.addstr(22, 0, "1. What is the role of the 'sync' package in the Go program?")
+
+    # Simple Question 1
+    stdscr.addstr(22, 0, "1. Which package is used for concurrency?")
     stdscr.addstr(23, 0, "Answer: ")
     curses.echo()
     answer1 = stdscr.getstr(23, 8).decode('utf-8').strip()
     curses.noecho()
 
-    # Advanced Question 2
-    stdscr.addstr(25, 0, "2. How does the 'net/http' package handle HTTP requests in the Go program?")
+    # Simple Question 2
+    stdscr.addstr(25, 0, "2. Which package is used for making HTTP requests?")
     stdscr.addstr(26, 0, "Answer: ")
     curses.echo()
     answer2 = stdscr.getstr(26, 8).decode('utf-8').strip()
     curses.noecho()
 
-    # Advanced Question 3
-    stdscr.addstr(28, 0, "3. What is the purpose of 'json.Unmarshal' in the Go program?")
+    # Simple Question 3
+    stdscr.addstr(28, 0, "3. Which package is used to parse JSON?")
     stdscr.addstr(29, 0, "Answer: ")
     curses.echo()
     answer3 = stdscr.getstr(29, 8).decode('utf-8').strip()
     curses.noecho()
 
-    # Advanced Question 4
-    stdscr.addstr(31, 0, "4. Explain how 'ioutil.ReadAll' contributes to reading the response body.")
+    # Simple Question 4
+    stdscr.addstr(31, 0, "4. Which function reads the entire response body?")
     stdscr.addstr(32, 0, "Answer: ")
     curses.echo()
     answer4 = stdscr.getstr(32, 8).decode('utf-8').strip()
     curses.noecho()
 
     if (
-        answer1.lower() == "to manage concurrent tasks and wait for their completion" and
-        answer2.lower() == "it handles HTTP requests by providing methods like http.Get to send requests and receive responses" and
-        answer3.lower() == "it converts JSON data from a byte slice into a Go data structure" and
-        answer4.lower() == "it reads the entire response body into memory, returning it as a byte slice"
+        answer1.lower() == "sync" and
+        answer2.lower() == "http" and
+        answer3.lower() == "json" and
+        answer4.lower() == "readall"
     ):
         stdscr.addstr(34, 0, "Correct! You've successfully completed the challenge.")
         stdscr.addstr(35, 0, "Here is the final flag = _1nV1s1b13_5678}")
     else:
         stdscr.addstr(34, 0, "Incorrect answers. Try again.")
+
 
