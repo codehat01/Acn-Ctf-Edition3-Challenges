@@ -17,15 +17,14 @@ answers of the follwoing challenges
     - 0 
     - output.json 
 6. box 06
-    - 3 
+    - 5  
     - float64 
-    - type 
 7. box 07
-    - 150
-    - 30 || 30.00
-    - 14.72
+    - 5 
+    - 2.58
 8. secret box
     - sync
     - http 
     - json 
     - readall
+ACN_CTF{R3c0gn1z3_TH3_1nV1s1b13_5678}

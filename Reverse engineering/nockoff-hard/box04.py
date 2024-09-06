@@ -114,16 +114,7 @@ def start_challenge3(stdscr):
     stdscr.getch()
 
     display_go_program(stdscr)
-
-    # Run the Go program
-    try:
-        subprocess.run(["go", "run", "GoProgram.go"], check=True)
-    except subprocess.CalledProcessError as e:
-        stdscr.addstr(20, 0, f"Error running Go program: {str(e)}")
-        stdscr.refresh()
-        stdscr.getch()
-        return
-
+    stdscr.clear()
     stdscr.addstr(20, 0, "Go program executed successfully. Now, answer the following:")
 
     # Simple Question 1
@@ -162,7 +153,18 @@ def start_challenge3(stdscr):
     ):
         stdscr.addstr(34, 0, "Correct! You've successfully completed the challenge.")
         stdscr.addstr(35, 0, "Here is the final flag = _1nV1s1b13_5678}")
+        stdscr.addstr(36, 0, "Press Enter to exit.")
+        stdscr.refresh()
+        while True:
+            key = stdscr.getch()
+            if key == ord('\n') or key == 10:  # Handling Enter key
+                return True
     else:
         stdscr.addstr(34, 0, "Incorrect answers. Try again.")
-
+        stdscr.addstr(35, 0, "Press Enter to exit.")
+        stdscr.refresh()
+        while True:
+            key = stdscr.getch()
+            if key == ord('\n') or key == 10:  # Handling Enter key
+                return False
 

@@ -7,15 +7,6 @@ import box04
 # Define the grid state globally to access within callbacks
 grid_state = {}
 
-def check_all_box():
-    j=0
-    for i in range(grid_state):
-      j=j+1
-    if j==7:
-        return True
-    else:
-        return False
-
 def on_enter_secret_box(x,y,stdscr):
     ress=box04.final(stdscr)
     if ress:
@@ -65,6 +56,10 @@ def on_enter_box(x, y, stdscr):
             grid_state[(x, y)] = "go3"
         else:
             pass
+    if x==4 and y==6:
+        result8=box04.start_challenge3(stdscr)
+        pass
+            
 
 
 curser="😦"
@@ -80,7 +75,7 @@ def main(stdscr):
     x, y = 8, 13
     
     # Coordinates of the boxes
-    box_positions = [(4, 2), (18, 2), (35, 2), (4, 9), (4, 16), (18, 16), (35, 16)]
+    box_positions = [(4, 2), (18, 2), (35, 2), (4, 9), (4, 16), (18, 16), (35, 16),(4,6)]
     
     # State of the grid (initially, all boxes contain "???")
     grid_state = {pos: "???" for pos in box_positions}
@@ -130,12 +125,5 @@ def main(stdscr):
             x -= 1
         elif key == ord('d') and x < 38 and (y, x + 1) not in [(0, 7), (0, 15), (0, 23), (0, 31)]:  # Adjust if needed
             x += 1
-        
-        if x==4 and x==6 and check_all_box():
-            stdscr.addstr(19, 0, "Enter the box?:")
-        if key==ord('q'):
-            break
-        elif key == ord('\n') and x==4 and y==6:
-            on_enter_secret_box(x,y,stdscr)
 
 curses.wrapper(main)
